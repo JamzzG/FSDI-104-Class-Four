@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/mystyle..css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="frame">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register.html">New Pet</a>
+            </li>
+        </ul>
+
+        <h1 class="title" id="title"></h1>
+        <p id="catch-phrase">
+        </p>
+
+        <main>
+            <div class="container">
+                <h2 class ="input-title">Add a new pet</h2>
+                    <input class="form-control" type="text"  id="txtName"    placeholder="Enter pet's name: *">
+                    <input class="form-control" type="number"  id="numAge" placeholder="Enter pet's age: ">
+                    <select class="form-select" id="txtGender">
+                        <option value="">--select a gender--</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <select class="form-control" id="txtBreed">
+                        <option value="">-- select a breed--</option>
+                        <optgroup id="cats" label="Cat Breeds">
+                        </optgroup>
+                        <optgroup id="dogs" label="Dog Breeds">
+                        </optgroup>
+                        <optgroup id="other" label="Other Pets">
+                            <option value="">Bird</option>
+                            <option value="">Gerbil</option>
+                            <option value="">Hamster</option>
+                            <option value="">Other Pet</option>
+                        </optgroup>
+                    </select>
+        
+                        
+                    <select class="form-select" id="selService">
+                        <option value="">--select the reason for the appointment--*</option>
+                        <option value="nails"> 🐾__Nails Cut__🐾</option>
+    <option value="vaccines">💉__Vaccines__💉</option>
+                        <option value="grooming">✂️_Grooming_✂️</option>
+                    </select>
+                    <input class="form-control" input type="text" id="txtOwner" placeholder="Please enter the Owner's name: ">
+                    <input class="form-control" input type="tel" id="numContact" placeholder="Please enter a contact phone number: *">
+                <button onclick="register()"   class="btn btn-light">register</button>
+            </div>
+            <div class="flex-pic">
+                <img src="/Photos/dog-before-after.png" alt="before and after photo of a dog getting a bath">
+            </div>         
+        </main>
+        <!-- Search Function Bar/button -->
+        <div class="search"> 
+            <input type="text" id="searchBar" placeholder="  Search by Pet Name or Phone Number" class="search-box">
+            <button class="btn-search"  onclick="search()">🔍</button>
+        </div>
+        <div id="pets" class="pets">
+        </div>
+        <script src="scripts/display.js"></script>
+        <script src="scripts/register.js"></script>
+    </div>
+    
+</body>
+</html>
